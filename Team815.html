@@ -1,0 +1,198 @@
+<html>
+<title>Team 815</title>
+<!--Extends-->
+<section>
+    <!--FooterCSS-->
+    <link rel="stylesheet" type="text/css" href="StyleSheets/Footer.css" media="screen" />
+    <!--ButtonCSS-->
+    <link rel="stylesheet" type="text/css" href="StyleSheets/Button.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="StyleSheets/DButton.css" media="screen" />
+    <!--HeaderCSS-->
+    <link rel="stylesheet" type="text/css" href="StyleSheets/Header.css" media="screen" />
+    <!--EssentialCSS-->
+    <link rel="stylesheet" type="text/css" href="StyleSheets/Essential.css" media="screen" />
+    <!--SliderCSS-->
+    <link rel="stylesheet" type="text/css" href="StyleSheets/Slider.css" media="screen" />
+</section>
+<!--Header-->
+<header>
+    <!--Logo-->
+    <div class="header">
+    <a href="Team815.html"><img src="Images/Logo.png" width="80" height="80"></a>
+    <ul class="header-socials">
+    <li><a href="https://www.instagram.com/frc.815/"><img src="Images/Insta.png" height="30" width="30"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+    <li><a href="https://www.instagram.com/frc.815/"><img src="Images/Youtube.png" height="45" width="45"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+    <li><a href="https://www.instagram.com/frc.815/"><img src="Images/Facebook.png" height="30" width="30"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+    </ul>
+    <!--Directs--> 
+    <div class="header-bottom">
+    <div class="Header-menu">
+    <ul class="h-menu">
+    <li><a href="Team815.html"><button class="h-button">Home</li></button></a>
+    <li><a href="sub/About.html"><button class="h-button">About</li></button></a>
+    <li><a href="sub/Robot.html"><button class="h-button">Our Robots</li></button></a>
+    <li><a href="sub/Fundraiser.html"><button class="h-button">Fundraiser</li></button></a>
+    <li><a href="sub/Sponsors.html"><button class="h-button">Sponsors</li></button></a>
+  
+<!--Experimental Drop down Button: 
+<div class="DButton">
+<li><a href="sub/robot.html"><button class="DButton">Our Robots</li></button></a><div>
+<a href="#">Long Link</a>
+<a href="#">Link</a>
+<a href="#">Link</a>-->  
+    </div></div></div></ul>
+</header>
+<!--Body-->
+<body>
+    <!--TopText-->
+    <section>
+    <br>    <br>    <br>  <br>    <br>    <br>     
+    <center>
+    <h1><p style="font-family:serif">Team 815</p>
+    </h1>
+    <p><h1><p style="font-family:serif">
+    A First Robotics team in Allen Park, MI. Building more than robots 
+    </p></h1>
+    </p>
+    </center>
+    </section>
+    <!--Buttons-->
+    <section>
+        <center>
+        <a href="Sub/About.html">
+        <button class="button" style="vertical-align:middle">
+            <span>About Us</button></a></span>
+        
+        <a href="Sub/Robot.html">
+        <button class="button" style="vertical-align:middle">
+        <span>Our Robot</button></a></span>
+        
+        <a href="Sub/Fundraiser.html">
+        <button class="button" style="vertical-align:middle">
+        <span>Fundraising</button></a></span>
+        
+        <a href="Sub/Sponsors.html">
+        <button class="button" style="vertical-align:middle">
+        <span>Sponsors</button></a></span>
+        </center>
+    </section>
+    <br>
+    <br>
+    <!--Slider-->
+    <section>
+        <center>
+        <div id="slider">
+        <ul id="slideWrap"> 
+        <li><img src="Images/Slider/img1.jpg" alt=""></li>
+        <li><img src="Images/Slider/img2.png" alt=""></li>
+        <li><img src="Images/Slider/img3.png" alt=""></li>
+        </ul>
+        <a id="prev" href="#">&#8810;</a>
+        <a id="next" href="#">&#8811;</a>
+        </div>
+        <script>
+        var responsiveSlider = function() {
+
+        var slider = document.getElementById("slider");
+        var sliderWidth = slider.offsetWidth;
+        var slideList = document.getElementById("slideWrap");
+        var count = 1;
+        var items = slideList.querySelectorAll("li").length;
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+
+        window.addEventListener('resize', function() {
+        sliderWidth = slider.offsetWidth;
+        });
+
+        var prevSlide = function() {
+        if(count > 1) {
+        count = count - 2;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+        }
+        else if(count = 1) {
+        count = items - 1;
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+        }
+        };
+
+        var nextSlide = function() {
+        if(count < items) {
+        slideList.style.left = "-" + count * sliderWidth + "px";
+        count++;
+        }
+        else if(count = items) {
+        slideList.style.left = "0px";
+        count = 1;
+        }
+        };
+
+        next.addEventListener("click", function() {
+        nextSlide();
+        });
+
+        prev.addEventListener("click", function() {
+        prevSlide();
+        });
+
+        setInterval(function() {
+        nextSlide()
+        }, 5000);
+
+        };
+
+        window.onload = function() {
+        responsiveSlider();  
+        }
+
+
+        </script>
+        </center>
+    
+    </section>
+    <!--Pictures-->
+    <section>
+    <center>
+    <br>
+    <br>
+    <a href="https://www.firstinspires.org">
+    <img src="Images/FIRST.png" width="350" height="280"></a>
+    </center> 
+    <br>
+    <br>
+    </section> 
+</body>
+<!--Footer-->
+<footer>
+    <center>
+    <!--Socials-->
+    <div class="footer-content">
+    <h3>Team 815</h3>      
+    <p><a href="Team815.html"><img src="Images/Logo.png" width="100" height="100"></a>
+  
+    <p>This is a footer, we have one because all good websites do.</p>
+    <ul class="footer-socials">
+    <li><a href="https://www.instagram.com/frc.815/"><img src="Images/Insta.png" height="50" width="50"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+    <li><a href="https://www.instagram.com/frc.815/"><img src="Images/Youtube.png" height="70" width="70"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+    <li><a href="https://www.instagram.com/frc.815/"><img src="Images/Facebook.png" height="50" width="50"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+    </ul>
+    </div>
+    <!--Directs-->
+    <div class="footer-bottom">
+    <a href="Sub/Changelogs.html">
+    <p><span class="Ver"></span></p></a>
+    <div class="footer-menu">
+    <ul class="f-menu">
+    <li><a href="Team815.html">Home</a></li>
+    <li><a href="Sub/About.html">About Us</a></li>
+    <li><a href="Sub/Robot.html">Our Robots</a></li>
+    <li><a href="Sub/Fundraiser.html">Fundraising</a></li>
+    <li><a href="Sub/Sponsors.html">Sponsors</a></li>
+    </ul>
+    </div>
+    </div>
+    </center>
+</footer>
+</html>

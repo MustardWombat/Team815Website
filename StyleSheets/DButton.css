@@ -1,0 +1,41 @@
+.DButton{
+display:inline-block;
+position:relative;
+}
+.DButton button{
+border:none;
+padding:8px 16px;
+background-color:deepPink;
+color:white;
+transition:.3s;
+cursor:pointer;
+}
+.dDButton:hover button{
+background-color:hotPink;
+}
+.dDButton div{
+background-color:#fff;
+box-shadow:0 4px 8px rgba(0,0,0,0.2);
+z-index:1;
+visibility:hidden;
+position:absolute;
+min-width:100%;
+opacity:0;
+transition:.3s;
+}
+.DButton:hover div{
+visibility:visible;
+opacity:1;
+}
+.DButton div a{
+display:block;
+text-decoration:none;
+padding:8px;
+color:#000;
+transition:.1s;
+white-space:nowrap;
+}
+.DButton div a:hover{
+background-color:hotPink;
+color:#fff;
+}
