@@ -22,7 +22,7 @@ transition: 0.5s;
 }
 .button span:after {
 
-content: '\00bb';
+content: '\276F';
 position: absolute;
 opacity: 0;
 color: #f97520;
