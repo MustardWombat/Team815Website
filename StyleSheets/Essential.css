@@ -1,7 +1,7 @@
 html, body {
-background: #000;
+background-color: black;
+z-index: 0;
 font-family: sans-serif;
-background-color: #000000;
 margin:0;
 padding:0;
 }
@@ -20,6 +20,6 @@ margin-top: 100px;
 .largespace {
 margin-top: 150px;
 }
-
-
-
+tr {
+color: #f97520;
+}

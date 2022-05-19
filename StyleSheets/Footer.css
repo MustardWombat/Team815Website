@@ -1,4 +1,5 @@
 footer{
+z-index: 10;
 position:absolute;
 bottom: auto;
 left: 0;
@@ -105,5 +106,5 @@ margin-bottom: 20px;
 .Ver::before {
 font-weight: bold;
 color: WHITE;
-content: "Version 0.6, last updated 1/11/22";
+content: "Version 0.8, last updated: 05/15/22";
 }

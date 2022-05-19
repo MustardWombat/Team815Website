@@ -21,9 +21,7 @@
     transition: 0.5s;
     }
     .Backbutton span:after {
-    
     content: '\276E';
-    
     position: absolute;
     opacity: 0;
     color: #f97520;

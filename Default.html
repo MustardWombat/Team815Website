@@ -1,0 +1,296 @@
+<html>
+<!--Title-->
+<title>Team 815</title>
+<!--Extends-->
+<section>
+	<link rel="stylesheet" href="Stylesheets/Essential.css">
+	<link rel="stylesheet" href="Stylesheets/Button.css">
+	<link rel="stylesheet" href="Stylesheets/Header.css">
+	<link rel="stylesheet" href="Stylesheets/Footer.css">
+	<link rel="stylesheet" href="Stylesheets/Slider.css">
+	<link rel="stylesheet" href="Stylesheets/Logo.css">
+	<link rel="stylesheet" href="Stylesheets/BackButton.css">
+</section>
+<!--Header-->
+<section>
+	<div class="header">
+	<a href="Default.html"><img src="Images/Logo.png" width="80" height="80"></a>
+	<ul class="header-socials">
+	<li><a href="https:www.instagram.comfrc.815"><img src="Images/Insta.png" height="30" width="30"><i class="https:www.instagram.comfrc.815"></i></a></li>
+	<li><a href="https:www.youtube.comuserFRC815featured"><img src="Images/Youtube.png" height="45" width="45"><i class="https:www.instagram.comfrc.815"></i></a></li>
+	<li><a href="https:www.instagram.comfrc.815"><img src="Images/Facebook.png" height="30" width="30"><i class="https:www.instagram.comfrc.815"></i></a></li>
+	</ul>
+	<div class="header-bottom">
+	<div class="Header-menu">
+	<ul class="h-menu">
+	<li><a href="Default.html"><button class="h-button">Home</button></a></li>
+	<li><a href="About.html"><button class="h-button">About</button></a></li>
+	<li><a href="Season.html"><button class="h-button">Our Seasons</button></a></li>
+	<li><a href="Fundraising.html"><button class="h-button">Fundraiser</button></a></li>
+	<li><a href="Sponsors.html"><button class="h-button">Sponsors</button></a></li>
+	<li><a href="Join.html"><button class="h-button">Join</button></a></li>
+	</ul></div></div></div>	
+</section>
+<!--Body-->
+<body>
+<div class="context">
+<!--TopText-->
+<section>
+<ul class="mediumspace"></ul>
+<center>
+<h1><p style="font-family:serif">Team 815</p>
+</h1>
+<p><h1><p style="font-family:serif">
+A First Robotics team in Allen Park, MI. Building more than robots 
+</p></h1>
+</p>
+</center>
+</section>
+<!--Buttons-->	
+<section>
+<center>
+<a href="About.html">
+<button class="button" style="vertical-align:middle">
+<span>About Us</span></button></a>
+
+<a href="Robot.html">
+<button class="button" style="vertical-align:middle">
+<span>Our Robot</span></button></a>
+
+<a href="Fundraiser.html">
+<button class="button" style="vertical-align:middle">
+<span>Fundraising</span></button></a>
+
+<a href="Sponsors.html">
+<button class="button" style="vertical-align:middle">
+<span>Sponsors</span></button></a>
+</center>
+</section>
+<ul class="smallspace"></ul>
+<!--Slider-->
+<section>
+<center>
+<div id="slider">
+<ul id="slideWrap"> 
+<li><img src="Images/Slider/img1.jpg"></li>
+<li><img src="Images/Slider/img2.png"></li>
+<li><img src="Images/Slider/img3.png"></li>
+</ul>
+<a id="prev" href="#">&#8810;</a>
+<a id="next" href="#">&#8811;</a>
+</div>
+<script>
+var responsiveSlider = function() {
+
+var slider = document.getElementById("slider");
+var sliderWidth = slider.offsetWidth;
+var slideList = document.getElementById("slideWrap");
+var count = 1;
+var items = slideList.querySelectorAll("li").length;
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+
+window.addEventListener('resize', function() {
+sliderWidth = slider.offsetWidth;
+});
+
+var prevSlide = function() {
+if(count > 1) {
+count = count - 2;
+slideList.style.left = "-" + count * sliderWidth + "px";
+count++;
+}
+else if(count = 1) {
+count = items - 1;
+slideList.style.left = "-" + count * sliderWidth + "px";
+count++;
+}
+};
+
+var nextSlide = function() {
+if(count < items) {
+slideList.style.left = "-" + count * sliderWidth + "px";
+count++;
+}
+else if(count = items) {
+slideList.style.left = "0px";
+count = 1;
+}
+};
+
+next.addEventListener("click", function() {
+nextSlide();
+});
+
+prev.addEventListener("click", function() {
+prevSlide();
+});
+
+setInterval(function() {
+nextSlide()
+}, 5000);
+
+};
+window.onload = function() {
+responsiveSlider();  
+}
+</script>
+<!--Pictures-->
+<section>
+<center>
+<br><br>
+<a href="https://www.firstinspires.org">
+<img src="Images/FIRST.png" width="350" height="280"></a>
+</center> 
+<br><br>
+	</body>
+<!--Footer-->
+<section>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- #BeginLibraryItem "/Library/Footer.lbi" -->
+<!--Footer-->
+<footer>
+<center>
+<style>
+footer{
+z-index: 10;
+position:absolute;
+bottom: auto;
+left: 0;
+right: 0;
+background: #111;
+height: auto;
+width: auto;
+padding-top: 0px;
+color: #f97520;
+}
+.footer-content{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+}
+.footer-content h3{
+font-size: 2.1rem;
+font-weight: 500;
+text-transform: capitalize;
+line-height: 3rem;
+}
+.footer-content p{
+max-width: auto;
+margin: auto;
+line-height: 100px;
+font-size: 14px;
+color: #f97520;
+}
+.footer-socials{
+list-style: none;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 1rem 35 3rem 0;
+}
+.socials li{
+margin: 0 10px;
+color: #f97520;
+}
+.socials a{
+text-decoration: none;
+color: #f97520;
+border: none;
+padding: 5px;
+border-radius: 10%;
+}
+.socials a i{
+font-size: 1.1rem;
+width: 20px;
+transition: color .4s ease;
+}
+.socials a:hover i{
+color: WHITE;
+}
+.footer-bottom{
+background: #000;
+width: auto;
+padding: 10px;
+padding-bottom: 50px;
+text-align: center;
+}
+.footer-bottom p{
+float: left;
+font-size: 14px;
+word-spacing: 2px;
+text-transform: capitalize;
+}
+.footer-bottom p a{
+color:white;
+font-size: 16px;
+text-decoration: none;
+}
+.footer-bottom span{
+text-transform: uppercase;
+opacity: .4;
+font-weight: 200;
+}
+.footer-menu{
+float: right;
+}
+.footer-menu ul{
+display: flex;
+}
+.footer-menu ul li{
+padding-right: 10px;
+display: block;
+}
+.footer-menu ul li a{
+color: #f97520;
+text-decoration: none;
+}
+.footer-menu ul li a:hover{
+color: WHITE;
+}
+@media (max-width:500px) {
+}
+.footer-menu ul{
+display: flex;
+margin-top: 10px;
+margin-bottom: 20px;
+}
+.Ver::before {
+font-weight: bold;
+color: WHITE;
+content: "Version 0.85, last updated: 05/15/22";
+}
+</style>
+<!--Socials-->
+<div class="footer-content">
+<h3>Team 815</h3>
+<p><a href="../Library/Default.html"><img src="../Library/Images/Logo.png" width="100" height="100"></a>
+<p>This is a footer, we have one because all good websites do.</p>
+<ul class="footer-socials">
+<li><a href="https://www.instagram.com/frc.815/"><img src="../Library/Images/Insta.png" height="50" width="50"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+<li><a href="https://www.instagram.com/frc.815/"><img src="../Library/Images/Youtube.png" height="70" width="70"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+<li><a href="https://www.instagram.com/frc.815/"><img src="../Library/Images/Facebook.png" height="50" width="50"><i class="https://www.instagram.com/frc.815/"></i></a></li>
+</ul>
+</p>
+</div>
+<!--Directs-->
+<div class="footer-bottom"> <a href="../Library/Changelogs.html">
+<p><span class="Ver"></span></p>
+</a>
+<div class="footer-menu">
+<ul class="f-menu">
+<li><a href="../Library/Default.html">Home</a></li>
+<li><a href="../Library/About.html">About Us</a></li>
+<li><a href="../Library/Robot.html">Our Robots</a></li>
+<li><a href="../Library/Fundraiser.html">Fundraising</a></li>
+<li><a href="../Library/Sponsors.html">Sponsors</a></li>
+</ul>
+</div>
+</div>
+</center>
+</footer>
+<!-- #EndLibraryItem -->
+</section>
+</html>
